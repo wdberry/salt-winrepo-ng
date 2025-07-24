@@ -5,7 +5,7 @@
 zabbix-agent2:
 {% for major, subversions in versions.items() %}
 {% for minor in subversions %}
-  '{{major}}.{{minor}}.2400':
+  '{{major}}.{{minor}}':
     {% if grains['cpuarch'] == 'AMD64' %}
     full_name: 'Zabbix Agent 2 (64-bit)'
     installer: '{{source_path}}{{major}}/{{major}}.{{minor}}/zabbix_agent2-{{major}}.{{minor}}-windows-amd64-openssl.msi'
